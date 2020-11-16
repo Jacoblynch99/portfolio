@@ -1,10 +1,7 @@
 import React from 'react'
 import { Switch, Route, Redirect } from 'react-router'
 import cookie from 'cookie'
-import Listings from './containers/Listings'
-import Login from './containers/Login'
-import Restaurant from './containers/Restaurant'
-import AddListing from './containers/AddListing'
+import Landing from './components/Landing'
 
 const Router = () => {
     const checkAuth = () => {
@@ -30,7 +27,8 @@ const Router = () => {
 
     return (
         <Switch>
-            {/* ROUTES HERE */}
+            <Route exact path="/" component={Landing} />
+            {/* <Route path="/business/login" component={Login} /> */}
         </Switch>
     )
 }
